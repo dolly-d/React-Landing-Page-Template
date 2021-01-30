@@ -1,6 +1,6 @@
 {
   "homepage": "http://dolly-d.github.io/portfolio",
-  "name": "landingpage-react-template",
+  "name": "portfolio",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",

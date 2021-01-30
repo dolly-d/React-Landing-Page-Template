@@ -1,8 +1,23 @@
 import React, { Component } from "react";
+// import { Form } from 'react-advanced-form'
+// import { Input } from 'react-advanced-form-addons'
+
+
 
 export class Contact extends Component {
+  
+
+  clearForm = () =>{
+    this.setState({
+      name: "",
+      email: "",
+      message: ""
+    })
+  }
+  
   render() {
     return (
+      
       <div>
         <div id="contact">
           <div className="container">
@@ -11,8 +26,7 @@ export class Contact extends Component {
                 <div className="section-title">
                   <h2>Get In Touch</h2>
                   <p>
-                    Please fill out the form below to send us an email and we
-                    will get back to you as soon as possible.
+                    Please fill out the form below to send me an email.
                   </p>
                 </div>
                 <form name="sentMessage" id="contactForm" noValidate>
@@ -20,11 +34,12 @@ export class Contact extends Component {
                     <div className="col-md-6">
                       <div className="form-group">
                         <input
+                          name="name"
                           type="text"
                           id="name"
                           className="form-control"
                           placeholder="Name"
-                          required="required"
+                          required="required"                        
                         />
                         <p className="help-block text-danger"></p>
                       </div>
@@ -32,6 +47,7 @@ export class Contact extends Component {
                     <div className="col-md-6">
                       <div className="form-group">
                         <input
+                          name="email"
                           type="email"
                           id="email"
                           className="form-control"
@@ -49,7 +65,7 @@ export class Contact extends Component {
                       className="form-control"
                       rows="4"
                       placeholder="Message"
-                      required
+                      required="required"
                     ></textarea>
                     <p className="help-block text-danger"></p>
                   </div>
@@ -62,7 +78,7 @@ export class Contact extends Component {
             </div>
             <div className="col-md-3 col-md-offset-1 contact-info">
               <div className="contact-item">
-                <h3>Contact Info</h3>
+                <h4>Contact Info</h4>
                 <p>
                   <span>
                     <i className="fa fa-map-marker"></i> Address
@@ -91,22 +107,32 @@ export class Contact extends Component {
               <div className="row">
                 <div className="social">
                   <ul>
+                    
+  
                     <li>
-                      <a
-                        href={this.props.data ? this.props.data.facebook : "/"}
-                      >
-                        <i className="fa fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href={this.props.data ? this.props.data.twitter : "/"}>
+                      <a href={this.props.data ? this.props.data.twitter : "/"} target="_blank" rel="noopener noreferrer">
                         <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href={this.props.data ? this.props.data.youtube : "/"}>
+                      <a href={this.props.data ? this.props.data.youtube : "/"} target="_blank" rel="noopener noreferrer">
                         <i className="fa fa-youtube"></i>
                       </a>
+                    </li>
+                    <li> 
+                    <a href ={this.props.data ? this.props.data.medium : "/"} target="_blank" rel="noopener noreferrer">
+                    <i className="fa fa-medium"></i>
+                    </a>
+                    </li>
+                    <li>
+                    <a href={this.props.data ? this.props.data.github : "/"} target="_blank" rel="noopener noreferrer">
+                    <i className="fa fa-github" ></i>
+                    </a>
+                    </li>
+                    <li>
+                    <a href={this.props.data ? this.props.data.linkedin : "/"} target="_blank" rel="noopener noreferrer">
+                    <i className="fa fa-linkedin-square"></i>
+                    </a>
                     </li>
                   </ul>
                 </div>
@@ -114,19 +140,11 @@ export class Contact extends Component {
             </div>
           </div>
         </div>
-        <div id="footer">
-          <div className="container text-center">
-            <p>
-              &copy; 2020 Issaaf Kattan React Land Page Template. Design by{" "}
-              <a href="http://www.templatewire.com" rel="nofollow">
-                TemplateWire
-              </a>
-            </p>
-          </div>
-        </div>
+       
+           
       </div>
     );
-  }
+  } 
 }
 
 export default Contact;

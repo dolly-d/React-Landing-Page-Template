@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 export class Header extends Component {
   render() {
+    // console.log(this.props.qod)
     return (
       <header id="header">
         <div className="intro">
@@ -17,10 +18,10 @@ export class Header extends Component {
                     {this.props.data ? this.props.data.paragraph : "Loading"}
                   </p>
                   <a
-                    href="#features"
+                    href="#about"
                     className="btn btn-custom btn-lg page-scroll"
                   >
-                    Learn More
+                    About Me
                   </a>{" "}
                 </div>
               </div>

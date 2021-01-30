@@ -7,6 +7,45 @@ body, html {
 	width: 100% !important;
 	height: 100% !important;
 }
+/* .row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+	flex: 50%;
+	padding: 0 4px;
+  }
+  
+  .column img {
+	margin-top: 8px;
+	vertical-align: middle;
+  }
+  .grid { 
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 20px;
+	align-items: stretch;
+	}
+  .grid img {
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	max-width: 100%;
+  }
+  /* .responsive {
+	width: 100%;
+	height: auto;
+  } */
+  img {
+	display: block;
+	max-width:280px;
+	max-height:200px;
+	width: auto;
+	height: auto;
+  } 
+
 h2, h3, h4 {
 	font-family: 'Raleway', sans-serif;
 }
@@ -21,6 +60,16 @@ h3 {
 	font-size: 20px;
 	font-weight: 600;
 	color: #333;
+}
+h3::after{
+	position: absolute;
+    content: "";
+    background: linear-gradient(to right, #5ca9fb 0%, #6372ff 100%);
+    height: 4px;
+    width: 60px;
+    bottom: 0;
+    margin-left: -30px;
+    left: 50%;
 }
 h4 {
 	font-size: 18px;
@@ -52,8 +101,8 @@ ul, ol {
 }
 ul, ol {
 	padding: 0;
-	webkit-padding: 0;
-	moz-padding: 0;
+	-webkit-padding: 0;
+	-moz-padding: 0;
 }
 hr {
 	height: 2px;
@@ -76,7 +125,7 @@ hr {
 }
 #menu a.navbar-brand {
 	font-family: 'Raleway', sans-serif;
-	font-size: 24px;
+	font-size: 15px;
 	font-weight: 700;
 	color: #333;
 	text-transform: uppercase;
@@ -286,49 +335,7 @@ header .intro-text {
 	line-height: 24px;
 	margin: 30px 0;
 }
-/* Services Section */
-#services {
-	padding: 100px 0;
-	background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
-	color: #fff;
-}
-#services .service-desc {
-	margin: 10px 10px 20px;
-}
-#services h2 {
-	color: #fff;
-}
-#services .section-title h2::after {
-	position: absolute;
-	content: "";
-	background: rgba(255,255,255,.3);
-	height: 4px;
-	width: 60px;
-	bottom: 0;
-	margin-left: -30px;
-	left: 50%;
-}
-#services i.fa {
-	font-size: 42px;
-	width: 120px;
-	height: 120px;
-	padding: 40px 0;
-	background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
-	border-radius: 50%;
-	color: #fff;
-	box-shadow: 10px 10px 10px rgba(0,0,0,.05);
-}
-#services h3 {
-	font-weight: 500;
-	padding: 5px 0;
-	color: #fff;
-}
-#services p {
-	color: rgba(255,255,255,.75);
-}
-#services .service-desc {
-	margin-bottom: 40px;
-}
+
 /* Portfolio Section */
 #portfolio {
 	padding: 100px 0;

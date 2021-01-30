@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 
 export class Navigation extends Component {
-  render() {
+
+  // quotes=()=>{
+  //   return this.props.qod.map((quote) => console.log(quote))
+  // }
+  render(){
+    let quote = this.props.qod.contents && this.props.qod.contents.quotes[0].quote
+    let author = this.props.qod.contents && this.props.qod.contents.quotes[0].author
+    console.log(author)
     return (
       <nav id="menu" className="navbar navbar-default navbar-fixed-top">
         <div className="container">
@@ -19,8 +26,9 @@ export class Navigation extends Component {
               <span className="icon-bar"></span>{" "}
             </button>
             <a className="navbar-brand page-scroll" href="#page-top">
-              React Landing Page
+              {quote} 
             </a>{" "}
+            <p>{author}</p>
           </div>
 
           <div
@@ -29,33 +37,13 @@ export class Navigation extends Component {
           >
             <ul className="nav navbar-nav navbar-right">
               <li>
-                <a href="#features" className="page-scroll">
-                  Features
-                </a>
-              </li>
-              <li>
                 <a href="#about" className="page-scroll">
                   About
                 </a>
               </li>
               <li>
-                <a href="#services" className="page-scroll">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#portfolio" className="page-scroll">
-                  Gallery
-                </a>
-              </li>
-              <li>
-                <a href="#testimonials" className="page-scroll">
-                  Testimonials
-                </a>
-              </li>
-              <li>
-                <a href="#team" className="page-scroll">
-                  Team
+                <a href="#features" className="page-scroll">
+                  Projects
                 </a>
               </li>
               <li>
